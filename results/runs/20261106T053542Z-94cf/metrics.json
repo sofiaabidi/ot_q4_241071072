@@ -1,0 +1,92 @@
+{
+  "counts": {
+    "all_assignments": 64,
+    "feasible_assignments": 50
+  },
+  "methods": {
+    "greedy": {
+      "count1": 3,
+      "count2": 3,
+      "difference": 0.47001421164810786,
+      "feasible": true,
+      "mask": 28,
+      "squared_cost": 0.22091335915119234,
+      "t1": 12.199375201103035,
+      "t2": 11.729360989454927,
+      "vehicle1": [
+        "J3",
+        "J4",
+        "J5"
+      ],
+      "vehicle2": [
+        "J1",
+        "J2",
+        "J6"
+      ]
+    },
+    "parallel_exhaustive": {
+      "count1": 3,
+      "count2": 3,
+      "difference": 0.050971992653968456,
+      "feasible": true,
+      "mask": 22,
+      "squared_cost": 0.0025981440351162143,
+      "t1": 11.938882098951996,
+      "t2": 11.989854091605965,
+      "vehicle1": [
+        "J2",
+        "J3",
+        "J5"
+      ],
+      "vehicle2": [
+        "J1",
+        "J4",
+        "J6"
+      ]
+    },
+    "qaoa": {
+      "count1": 3,
+      "count2": 3,
+      "difference": 0.050971992653968456,
+      "feasible": true,
+      "mask": 22,
+      "squared_cost": 0.0025981440351162143,
+      "t1": 11.938882098951996,
+      "t2": 11.989854091605965,
+      "vehicle1": [
+        "J2",
+        "J3",
+        "J5"
+      ],
+      "vehicle2": [
+        "J1",
+        "J4",
+        "J6"
+      ]
+    }
+  },
+  "ml": {
+    "coefficients": [
+      0.040546290396590405,
+      0.14496980181486593,
+      0.2967292611438503
+    ],
+    "holdout_mae": 0.04851578711414959,
+    "holdout_r2": 0.992066930696058,
+    "intercept": 0.5123748325505493
+  },
+  "parallel_worker_pids": [
+    10600,
+    18860
+  ],
+  "qaoa_gap_hours": 0.0,
+  "qaoa_matches_exact": true,
+  "run_id": "20261106T053542Z-94cf",
+  "runtimes_seconds": {
+    "greedy": 9.889999637380242e-05,
+    "ml": 0.01247959997272119,
+    "parallel_exhaustive": 5.533673700003419,
+    "qaoa": 1.4712254000478424,
+    "serial_exhaustive": 0.00103270000545308
+  }
+}
