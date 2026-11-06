@@ -1,10 +1,10 @@
 # Latest successful run
 
-Run: `20261106T053542Z-94cf`
+Run: `20261106T054359Z-f35d`
 
-- [Configuration](runs/20261106T053542Z-94cf/config.json)
-- [Metrics](runs/20261106T053542Z-94cf/metrics.json)
-- [Console log](runs/20261106T053542Z-94cf/console.log)
-- [Predictions](runs/20261106T053542Z-94cf/predictions.csv)
-- [Assignments](runs/20261106T053542Z-94cf/assignments.csv)
-- [QAOA details](runs/20261106T053542Z-94cf/qaoa_details.json)
+- [Configuration](runs/20261106T054359Z-f35d/config.json)
+- [Metrics](runs/20261106T054359Z-f35d/metrics.json)
+- [Console log](runs/20261106T054359Z-f35d/console.log)
+- [Predictions](runs/20261106T054359Z-f35d/predictions.csv)
+- [Assignments](runs/20261106T054359Z-f35d/assignments.csv)
+- [QAOA details](runs/20261106T054359Z-f35d/qaoa_details.json)

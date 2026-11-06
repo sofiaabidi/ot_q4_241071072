@@ -1,0 +1,158 @@
+{
+  "candidate_selection": "lowest-imbalance observed feasible QAOA measurement; no exact-search input",
+  "chosen_mask": 22,
+  "chosen_probability": 0.040358967345595805,
+  "expectation_scaled": 0.02732500329100466,
+  "feasible_shots": 4061,
+  "most_likely_feasible_mask": 35,
+  "optimizer_runs": [
+    {
+      "expectation": 0.045384497907693847,
+      "iterations": 14,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        3.116701746338026,
+        0.0,
+        1.6312530808966808,
+        1.253065407117288
+      ],
+      "start": 0,
+      "success": true
+    },
+    {
+      "expectation": 0.045384497975341095,
+      "iterations": 11,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        3.1167907635954952,
+        1.938822909362042,
+        1.3135241260450692,
+        0.0
+      ],
+      "start": 1,
+      "success": true
+    },
+    {
+      "expectation": 0.027325003291074977,
+      "iterations": 17,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        2.252488303164203,
+        6.283185307179586,
+        2.839896236626121,
+        1.4631191631523437
+      ],
+      "start": 2,
+      "success": true
+    },
+    {
+      "expectation": 0.03511706863325417,
+      "iterations": 27,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        3.7803498326022287,
+        4.71895378718091,
+        0.9441592716778215,
+        1.1782147695509615
+      ],
+      "start": 3,
+      "success": true
+    },
+    {
+      "expectation": 0.02732500329116816,
+      "iterations": 26,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        2.252484013579949,
+        6.283185307179586,
+        2.8398961612558637,
+        1.4631187968408423
+      ],
+      "start": 4,
+      "success": true
+    },
+    {
+      "expectation": 0.02732500329100466,
+      "iterations": 40,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "parameters": [
+        2.252486747460494,
+        6.283185307179586,
+        2.83989601667606,
+        3.033915195453465
+      ],
+      "start": 5,
+      "success": true
+    }
+  ],
+  "parameters": [
+    2.252486747460494,
+    6.283185307179586,
+    2.83989601667606,
+    3.033915195453465
+  ],
+  "sampled_counts": {
+    "0": 2,
+    "1": 2,
+    "10": 69,
+    "11": 158,
+    "12": 39,
+    "13": 151,
+    "14": 173,
+    "15": 31,
+    "16": 3,
+    "18": 47,
+    "19": 154,
+    "2": 1,
+    "20": 7,
+    "21": 115,
+    "22": 168,
+    "23": 74,
+    "24": 59,
+    "25": 172,
+    "26": 134,
+    "27": 18,
+    "28": 176,
+    "29": 64,
+    "3": 15,
+    "30": 5,
+    "31": 6,
+    "32": 4,
+    "33": 5,
+    "34": 75,
+    "35": 203,
+    "36": 13,
+    "37": 132,
+    "38": 173,
+    "39": 55,
+    "4": 3,
+    "40": 65,
+    "41": 153,
+    "42": 103,
+    "43": 11,
+    "44": 163,
+    "45": 41,
+    "46": 2,
+    "47": 2,
+    "48": 18,
+    "49": 170,
+    "50": 162,
+    "51": 37,
+    "52": 150,
+    "53": 91,
+    "54": 29,
+    "55": 2,
+    "56": 129,
+    "57": 35,
+    "59": 3,
+    "6": 33,
+    "60": 12,
+    "61": 2,
+    "62": 3,
+    "63": 2,
+    "7": 147,
+    "9": 25
+  },
+  "shots": 4096,
+  "state_norm": 0.9999999999999998
+}

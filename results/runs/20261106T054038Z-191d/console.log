@@ -1,0 +1,20 @@
+Q4 cold-chain experiment run 20261106T054038Z-191d
+
+Predicted job times (hours)
+  J1: 2.791562
+  J2: 4.694059
+  J3: 3.373247
+  J4: 4.954552
+  J5: 3.871576
+  J6: 4.243740
+Holdout MAE=0.048516 hours, R^2=0.992067
+
+Method comparison
+Greedy               V1=['J3', 'J4', 'J5'] V2=['J1', 'J2', 'J6'] T1=12.199375 T2=11.729361 |diff|=0.470014 valid=True runtime=0.000112s
+QAOA                 V1=['J2', 'J3', 'J5'] V2=['J1', 'J4', 'J6'] T1=11.938882 T2=11.989854 |diff|=0.050972 valid=True runtime=2.195125s
+Parallel exhaustive  V1=['J2', 'J3', 'J5'] V2=['J1', 'J4', 'J6'] T1=11.938882 T2=11.989854 |diff|=0.050972 valid=True runtime=6.029775s
+Parallel worker PIDs: [32716, 33548]; serial runtime=0.001943s
+QAOA chosen mask 22 was observed 168 times
+QAOA matches exact optimum: True
+
+Evidence saved to C:\Users\adnan\Desktop\ot_exam\results\runs\20261106T054038Z-191d

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "parallel_workers": 2,
+  "python": "3.13.17",
+  "qaoa": {
+    "maxiter": 180,
+    "p": 2,
+    "seed": 72,
+    "shots": 4096,
+    "starts": 6
+  },
+  "split_random_state": 42,
+  "training_records": 100,
+  "training_seed": 72
+}

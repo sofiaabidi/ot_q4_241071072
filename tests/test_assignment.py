@@ -28,10 +28,16 @@ def test_greedy_is_deterministic_and_feasible():
 
 def test_parallel_matches_serial_and_uses_processes():
     times = train_and_predict().predictions
-    parallel, best, pids, _ = parallel_exhaustive_search(times)
+    parallel, best, ties, pids, _ = parallel_exhaustive_search(times)
     serial = serial_enumeration(times)
     serial_best = min((item for item in serial if item.feasible), key=lambda item: (item.difference, item.mask))
     assert parallel == serial
     assert best == serial_best
+    serial_ties = [
+        item for item in serial
+        if item.feasible and np.isclose(item.difference, serial_best.difference, rtol=1e-12, atol=1e-12)
+    ]
+    assert ties == serial_ties
+    assert [item.mask for item in ties] == [22, 41]
     assert len(pids) >= 2
 

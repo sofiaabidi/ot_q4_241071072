@@ -60,7 +60,7 @@ def run() -> tuple[str, Path, dict]:
         greedy = greedy_longest_first(regression.predictions)
         greedy_runtime = time.perf_counter() - greedy_started
         qaoa = run_qaoa(regression.predictions)
-        assignments, exact, pids, parallel_runtime = parallel_exhaustive_search(regression.predictions)
+        assignments, exact, exact_ties, pids, parallel_runtime = parallel_exhaustive_search(regression.predictions)
         serial_started = time.perf_counter()
         serial = serial_enumeration(regression.predictions)
         serial_best = min((item for item in serial if item.feasible), key=lambda item: (item.difference, item.mask))
@@ -73,6 +73,7 @@ def run() -> tuple[str, Path, dict]:
         _show("QAOA", qaoa.assignment, qaoa.runtime_seconds)
         _show("Parallel exhaustive", exact, parallel_runtime)
         print(f"Parallel worker PIDs: {pids}; serial runtime={serial_runtime:.6f}s")
+        print(f"All tied exact optimum masks: {[item.mask for item in exact_ties]}")
         print(f"QAOA chosen mask {qaoa.assignment.mask} was observed {qaoa.sampled_counts[qaoa.assignment.mask]} times")
         print(f"QAOA matches exact optimum: {np.isclose(qaoa.assignment.difference, exact.difference, atol=1e-10)}")
 
@@ -93,7 +94,7 @@ def run() -> tuple[str, Path, dict]:
             "serial_exhaustive": serial_runtime,
         }
         metrics = write_evidence(
-            run_id, directory, regression, assignments, greedy, exact, qaoa,
+            run_id, directory, regression, assignments, greedy, exact, exact_ties, qaoa,
             config, runtimes, pids
         )
         print(f"\nEvidence saved to {directory.resolve()}")

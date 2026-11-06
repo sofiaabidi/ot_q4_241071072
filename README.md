@@ -36,6 +36,10 @@ With `Z_i=1-2x_i`, the Ising cost is `H_C=(Σt_i Z_i)² = (Σt_i²)I + 2Σ_{i<j}
 
 The baseline is deterministic longest-job-first greedy allocation. Independently, `ProcessPoolExecutor` workers evaluate all 64 masks; exactly 50 satisfy the job-count rule. A serial enumeration cross-checks the parallel optimum. Runtime evidence includes worker process IDs; multiprocessing overhead can exceed useful work for only 64 candidates.
 
+## Verified comparison
+
+The latest audited run predicts `[2.791562, 4.694059, 3.373247, 4.954552, 3.871576, 4.243740]` hours for J1–J6, with holdout MAE `0.048516` hours and R² `0.992067`. Greedy assigns V1=`J3,J4,J5` and V2=`J1,J2,J6`, producing totals `12.199375` and `11.729361` hours (difference `0.470014`). QAOA and exact search both select representative mask 22: V1=`J2,J3,J5`, V2=`J1,J4,J6`, totals `11.938882` and `11.989854` hours (difference `0.050972`). Exact masks 22 and 41 are the two vehicle-label-swapped tied optima. Measured runtimes and sampling counts belong in the run evidence because they vary by machine and execution.
+
 ## Evidence and limitations
 
 Each run preserves its configuration, console output, all 100 generated records, six predictions, all assignments, sampled QAOA counts and parameters, runtimes, and comparison metrics. See [results/LATEST.md](results/LATEST.md).

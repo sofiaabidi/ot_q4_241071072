@@ -108,8 +108,8 @@ def _evaluate_chunk(
 
 def parallel_exhaustive_search(
     times: Iterable[float], workers: int = 2
-) -> tuple[list[Assignment], Assignment, list[int], float]:
-    """Evaluate every mask in actual worker processes and return the exact best."""
+) -> tuple[list[Assignment], Assignment, list[Assignment], list[int], float]:
+    """Evaluate every mask and return the representative and all tied optima."""
     if workers < 2:
         raise ValueError("Parallel search requires at least two workers")
     values = tuple(float(value) for value in times)
@@ -143,5 +143,9 @@ def parallel_exhaustive_search(
     if len(assignments) != 64 or len(feasible) != 50:
         raise AssertionError("Expected 64 total and 50 feasible assignments")
     best = min(feasible, key=lambda item: (item.difference, item.mask))
-    return assignments, best, pids, runtime
+    tied = [
+        item for item in feasible
+        if np.isclose(item.difference, best.difference, rtol=1e-12, atol=1e-12)
+    ]
+    return assignments, best, tied, pids, runtime
 

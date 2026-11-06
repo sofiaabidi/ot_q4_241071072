@@ -35,6 +35,7 @@ def write_evidence(
     assignments: list[Assignment],
     greedy: Assignment,
     exact: Assignment,
+    exact_ties: list[Assignment],
     qaoa: QAOAResult,
     config: dict,
     runtimes: dict,
@@ -56,6 +57,7 @@ def write_evidence(
         },
         "qaoa_matches_exact": bool(np.isclose(qaoa.assignment.difference, exact.difference, atol=1e-10)),
         "qaoa_gap_hours": float(qaoa.assignment.difference - exact.difference),
+        "exact_tied_optimal_masks": [item.mask for item in exact_ties],
         "runtimes_seconds": runtimes,
         "parallel_worker_pids": worker_pids,
     }
