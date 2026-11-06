@@ -1,0 +1,15 @@
+.venv/
+.python/
+python-installer.exe
+python-embed.zip
+get-pip.py
+python-install*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+
